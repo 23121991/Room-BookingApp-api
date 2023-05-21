@@ -58,5 +58,5 @@ app.use((err, req, res, next) => {
 
 app.listen(port, () => {
   connect();
-  console.log("Connected to backend.");
+  console.log(`Connected to backend on ${port}`);
 });
