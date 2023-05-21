@@ -36,13 +36,13 @@ app.use("/api/users", usersRoute);
 app.use("/api/hotels", hotelsRoute);
 app.use("/api/rooms", roomsRoute);
 
-app.use(function (req, res, next) {
-  res.setHeader(
-    'Content-Security-Policy-Report-Only', "default-src 'self'; script-src 'self' https://code.jquery.com https://cdnjs.cloudflare.com https://stackpath.bootstrapcdn.com https://cdn.jsdelivr.net 'sha256-ISInfOBSUWFgeTRFLf63g+rFNSswGDl15oK0iXgYM='; style-src 'self' https://stackpath.bootstrapcdn.com https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self'; frame-src 'self'"
-  );
+// app.use(function (req, res, next) {
+//   res.setHeader(
+//     // 'Content-Security-Policy-Report-Only', "default-src 'self'; script-src 'self' https://code.jquery.com https://cdnjs.cloudflare.com https://stackpath.bootstrapcdn.com https://cdn.jsdelivr.net 'sha256-ISInfOBSUWFgeTRFLf63g+rFNSswGDl15oK0iXgYM='; style-src 'self' https://stackpath.bootstrapcdn.com https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self'; frame-src 'self'"
+//   );
   
-  next();
-});
+//   next();
+// });
 
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
